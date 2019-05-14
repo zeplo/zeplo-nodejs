@@ -1,0 +1,51 @@
+{
+  "name": "@zeplo/nodejs",
+  "version": "0.1.0",
+  "description": "NodeJS Client for Zeplo",
+  "repository": "https://github.com/zeplo/zeplo-nodejs",
+  "author": "Calum Moore",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest ./src --coverage --runInBand",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "nyc:coverage": "NODE_ENV=test nyc --reporter=html jest ./src",
+    "test:watch": "jest --watchAll",
+    "test:e2e": "NODE_ENV=development jest e2e --runInBand",
+    "test:e2e:prod": "NODE_ENV=production jest e2e --runInBand",
+    "build": "babel src --ignore .spec.js -d lib",
+    "prepublish": "yarn run build"
+  },
+  "dependencies": {
+    "micro": "^9.3.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "babel-watch": "^7.0.0",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.4",
+    "dotenv": "^8.0.0",
+    "eslint": "^5.2.0",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.10.0",
+    "jest": "^24.1.0",
+    "nyc": "^14.1.1"
+  },
+  "jest": {
+    "restoreMocks": true,
+    "setupFiles": [
+      "./jest-setup"
+    ]
+  }
+}
