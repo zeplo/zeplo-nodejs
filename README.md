@@ -1,6 +1,6 @@
 # Zeplo Node.js Library
 
-[![Build Status](https://travis-ci.org/zeplo/zeplo-nodejs.svg?branch=master)](https://travis-ci.org/Taskbird/taskbird-node) [![Coverage Status](https://coveralls.io/repos/github/Taskbird/zeplo-nodejs/badge.svg?branch=master)](https://coveralls.io/github/Taskbird/taskbird-node?branch=master)
+[![Build Status](https://travis-ci.org/zeplo/zeplo-nodejs.svg?branch=master)](https://travis-ci.org/zeplo/zeplo-nodejs) [![Coverage Status](https://coveralls.io/repos/github/zeplo/zeplo-nodejs/badge.svg?branch=master)](https://coveralls.io/github/zeplo/zeplo-nodejs?branch=master)
 
 Official NodeJS client for [Zeplo](https://zeplo.io). The library provides convenient access to the Zeplo API and other helper functions.
 
