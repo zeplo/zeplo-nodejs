@@ -19,7 +19,9 @@ The API allows either Promise or callbacks to be used.
 
 ### zeplo.fn (asyncCallback)
 
-This helper fn turns your serverless function into a HTTP server. Requests passed to the server will be passed to the function you define - the request `body` will be passed (if json is detected it will be parsed) as `data`. `context` is derived from various headers. The server will expose a port defined by PORT environment variable.
+This helper fn turns your serverless function into a HTTP server. 
+
+Requests passed to the server will be passed to the function you define. The request `body` will be passed (if json is detected it will be parsed) as `data`. The `context` param is derived from various headers. The server will expose a port defined by `PORT` environment variable.
 
 You could choose to expose your own server, but for simple cases this helper can be much clearner. 
 
@@ -27,7 +29,7 @@ You could choose to expose your own server, but for simple cases this helper can
 import zeplo from '@zeplo/nodejs'
 
 zeplo.func(async (data, context) => {
-  // Process data (this is just the HTTP body 😉)
+  // Process data (this is just the parsed HTTP body 😉)
   return 'OK'
 })
 ```
