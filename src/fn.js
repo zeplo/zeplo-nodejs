@@ -1,4 +1,4 @@
-import server, { text } from './http'
+import server from './http'
 
 const asyncJson = async (str) => {
   return JSON.parse(str)
@@ -11,7 +11,7 @@ export default function fnToHttp (fn) {
 }
 
 export async function requestHandler (fn, req, res) {
-  const body = await text(req)
+  const body = await server.text(req)
   const json = await asyncJson(body).catch(() => null)
   return fn(json || body, {
     req, res,
